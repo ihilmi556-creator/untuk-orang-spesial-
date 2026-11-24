@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dari Irpan Hilmi untuk Ibu Tri Lestari ✨</title>
+<link href="https://googleapis.com" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:radial-gradient(circle at center,#3b0d26 0%,#170510 55%,#080205 100%);color:#fff;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;position:relative}
+#cv{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.wrap{max-width:440px;width:100%;position:relative;z-index:10;display:flex;justify-content:center;align-items:center}
+.card{width:100%;background:rgba(255,255,255,.06);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,182,193,.28);border-radius:36px;box-shadow:0 30px 70px rgba(0,0,0,.8);padding:34px 24px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.page{display:none;width:100%;flex-direction:column;align-items:center;justify-content:center;text-align:center;animation:fadeUp .7s ease}
+.page.show{display:flex}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.pill{display:inline-block;background:rgba(244,63,94,.22);border:1px solid rgba(251,113,133,.45);color:#fecdd3;font-size:.74rem;font-weight:600;padding:6px 18px;border-radius:50px;margin-bottom:16px}
+.orb{width:80px;height:80px;margin:0 auto 16px;border-radius:50%;background:linear-gradient(135deg,#f43f5e,#be123c);display:flex;justify-content:center;align-items:center;font-size:2.1rem;box-shadow:0 0 35px rgba(244,63,94,.55);animation:beat 1.8s infinite}
+@keyframes beat{50%{transform:scale(1.12)}}
+h1,h2{font-family:'Cormorant Garamond',serif;line-height:1.2;margin-bottom:14px;text-align:center}
+h1{font-size:2.1rem}h2{font-size:1.9rem}
+.pink{font-style:italic;color:#fda4af}
+.foto{width:168px;height:212px;margin:0 auto 16px;border-radius:24px;padding:5px;background:linear-gradient(145deg,rgba(251,113,133,.55),rgba(255,255,255,.12));box-shadow:0 15px 35px rgba(0,0,0,.55);animation:float 4s infinite ease-in-out;display:flex;justify-content:center;align-items:center}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:19px;display:block}
+.teks{width:100%;background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:18px;text-align:center;font-size:.92rem;line-height:1.8;color:#f8fafc;font-weight:300;min-height:135px;margin-bottom:20px;display:flex;align-items:center;justify-content:center}
+.doa{width:100%;background:linear-gradient(135deg,rgba(244,63,94,.22),rgba(147,51,234,.16));border:1px solid rgba(251,113,133,.45);border-radius:22px;padding:18px;text-align:center;font-size:.92rem;line-height:1.8;color:#ffe4e6;min-height:145px;margin-bottom:20px;display:flex;align-items:center;justify-content:center}
+.cursor{display:inline-block;width:2px;height:1.1em;background:#fb7185;margin-left:3px;vertical-align:middle;animation:blink .7s infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{background:linear-gradient(135deg,#e11d48,#fb7185);color:#fff;border:none;padding:14px 30px;border-radius:50px;font-size:.92rem;font-weight:600;cursor:pointer;box-shadow:0 10px 28px rgba(225,29,72,.5);width:100%;transition:.25s}
+.btn:active{transform:scale(.97)}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<audio id="aud" loop>
+  <source src="lagu.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<div class="wrap">
+  <div class="card">
+    <!-- HALAMAN 1 -->
+    <div class="page show" id="h1">
+      <div class="pill">💌 Pesan Spesial dari Irpan Hilmi</div>
+      <div class="orb">💖</div>
+      <h2>Untuk Ibu Guru TK<br>yang Paling Menginspirasi</h2>
+      <div class="teks"><span id="t1"></span></div>
+      <button type="button" class="btn" onclick="ganti(2, true)">Buka Pesan dari Irpan ✨</button>
+    </div>
+
+    <!-- HALAMAN 2 -->
+    <div class="page" id="h2">
+      <div class="pill">UNTUK SANG PENDIDIK HEBAT</div>
+      <div class="foto"><img src="foto1.jpg.jpeg" alt="Foto 1"></div>
+      <h1>Selamat Hari Guru,<br><span class="pink">Ibu Tri Lestari</span></h1>
+      <div class="teks"><span id="t2"></span></div>
+      <button type="button" class="btn" onclick="ganti(3, false)">Lanjut Membaca ➔</button>
+    </div>
+
+    <!-- HALAMAN 3 -->
+    <div class="page" id="h3">
+      <div class="pill">UNGKAPAN RASA KAGUM</div>
+      <div class="foto"><img src="foto2.jpg.jpeg" alt="Foto 2"></div>
+      <h2>Sosok yang Diam-Diam<br><span class="pink">Selalu Mengagumkan</span></h2>
+      <div class="teks"><span id="t3"></span></div>
+      <button type="button" class="btn" onclick="ganti(4, false)">Lanjut Membaca ➔</button>
+    </div>
+
+    <!-- HALAMAN 4 -->
+    <div class="page" id="h4">
+      <div class="pill">KEHANGATAN DI SETIAP LANGKAH</div>
+      <div class="foto"><img src="foto3.jpg.jpeg" alt="Foto 3"></div>
+      <h2>Senyum yang Selalu<br><span class="pink">Menenangkan Hati</span></h2>
+      <div class="teks"><span id="t4"></span></div>
+      <button type="button" class="btn" onclick="ganti(5, false)">Lanjut Membaca ➔</button>
+    </div>
+
+    <!-- HALAMAN 5 -->
+    <div class="page" id="h5">
+      <div class="pill">DARI HATI YANG PALING DALAM</div>
+      <div class="foto"><img src="foto4.jpg.jpeg" alt="Foto 4"></div>
+      <h2>Cahaya di Tengah<br><span class="pink">Kesibukan Hari</span></h2>
+      <div class="teks"><span id="t5"></span></div>
+      <button type="button" class="btn" onclick="ganti(6, false)">Baca Untaian Doa 🤲</button>
+    </div>
+
+    <!-- HALAMAN 6 -->
+    <div class="page" id="h6">
+      <div class="pill">UNTAIAN DOA TULUS</div>
+      <div class="orb" style="width:68px;height:68px;font-size:1.8rem">🤲</div>
+      <h2>Doa Terbaik untuk<br><span class="pink">Ibu Tri Lestari</span></h2>
+      <div class="doa"><em id="t6"></em></div>
+      <button type="button" class="btn" onclick="ganti(7, false)">Lihat Halaman Terakhir ❤️‍🩹</button>
+    </div>
+
+    <!-- HALAMAN 7 -->
+    <div class="page" id="h7">
+      <div class="pill">SELAMAT HARI GURU NASIONAL</div>
+      <div class="foto"><img src="foto5.jpg.jpeg" alt="Foto 5"></div>
+      <h2>Terima Kasih Telah<br><span class="pink">Menjadi Begitu Istimewa</span></h2>
+      <div class="teks"><span id="t7"></span></div>
+      <button type="button" class="btn" onclick="ganti(1, false)">Baca Ulang dari Awal ↻</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const daftarTeks = {
+  1: "Hai Ibu Tri Lestari, ada sedikit rangkaian kata tulus, kenangan manis, dan alunan nada yang Irpan Hilmi siapkan khusus untuk merayakan ketulusan hatimu di Hari Guru ini.",
+  2: "Menjadi guru TK membutuhkan kesabaran seluas samudra dan hati yang penuh kasih sayang. Melihat cara Ibu membimbing langkah-langkah kecil anak-anak setiap hari selalu menghadirkan kehangatan.",
+  3: "Di ruang kelas, Ibu mungkin menjadi pelangi bagi murid-muridmu. Namun di luar itu, kelembutan tutur kata, kesabaran, dan senyum manismu adalah alasan kenapa aku selalu menaruh rasa kagum padamu.",
+  4: "Setiap senyum tulus yang Ibu bagikan bukan hanya menceriakan dunia anak-anak di sekolah, tetapi juga diam-diam menjadi alasan mengapa hari-hariku terasa jauh lebih indah.",
+  5: "Setiap perhatian kecil yang Ibu berikan selalu berhasil menumbuhkan tawa ceria di hati anak-anak. Tanpa Ibu sadari, ketulusan yang sama juga diam-diam tumbuh menjadi kekaguman yang dalam di hati seseorang yang selalu memperhatikanmu.",
+  6: "\"Ya Allah, jagalah selalu kesehatan dan kebahagiaan sosok hebat ini. Jadikanlah setiap lelah dan ilmunya sebagai amal jariyah yang tak terputus. Lapangkanlah rezekinya, tenangkanlah hatinya, dan jangan pernah pudarkan senyum manis di wajahnya. Aamiin.\" 🤲🌷",
+  7: "Teruslah bersinar dengan ketulusan hatimu, Ibu Guru favoritku. Semoga semesta selalu membalas setiap kebaikanmu dengan kebahagiaan yang berlipat ganda."
+};
+
+let timerKetik = null, cepat = false;
+
+function ketikHalaman(no) {
+  clearTimeout(timerKetik);
+  const target = document.getElementById('t' + no);
+  const kalimat = daftarTeks[no];
+  let idx = 0;
+  target.innerHTML = '';
+  function jalan() {
+    if (idx < kalimat.length) {
+      target.innerHTML = kalimat.slice(0, idx + 1) + '<span class="cursor"></span>';
+      idx++;
+      timerKetik = setTimeout(jalan, 28);
+    } else {
+      target.innerHTML = kalimat;
+    }
+  }
+  jalan();
+}
+
+function ganti(no, play) {
+  for (let n = 1; n <= 7; n++) {
+    document.getElementById('h' + n).className = 'page';
+  }
+  document.getElementById('h' + no).className = 'page show';
+  ketikHalaman(no);
+  if (play) document.getElementById('aud').play().catch(function(){});
+  if (no >= 6) cepat = true;
+}
+
+ketikHalaman(1);
+
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+let W = cv.width = window.innerWidth, H = cv.height = window.innerHeight;
+window.onresize = function() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; };
+const simbol = ['❤️', '💖', '💕', '🌸', '✨'];
+const pts = [];
+for (let k = 0; k < 52; k++) {
+  pts.push({
+    x: Math.random()*W, y: Math.random()*H, s: Math.random()*14+10,
+    v: Math.random()*0.9+0.4, t: simbol[k % simbol.length], a: Math.random()*0.6+0.35
+  });
+}
+function anim() {
+  ctx.clearRect(0,0,W,H);
+  for (let k = 0; k < pts.length; k++) {
+    let p = pts[k];
+    p.y -= cepat ? p.v*2 : p.v;
+    p.x += Math.sin(p.y*0.02)*0.7;
+    if (p.y < -25) { p.y = H+25; p.x = Math.random()*W; }
+    ctx.globalAlpha = p.a;
+    ctx.font = p.s + 'px serif';
+    ctx.fillText(p.t, p.x, p.y);
+  }
+  requestAnimationFrame(anim);
+}
+anim();
+</script>
+</body>
+</html>
